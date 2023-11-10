@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<style>
+    .layout {
+        width : 500px;
+        margin : 0 auto;
+        margin-top : 40px
+    }
+
+    .layout input {
+        width: 100%;
+        box-sizing : border-box;
+
+    }
+
+    .layout textarea {
+        width : 100%;
+        margin-top : 10px;
+        min-height : 300px;
+    }
+
+</style>
+
+
+
+<body>
+
+
+<div class="layout">
+<form th:action method="post" >
+
+    <input name="title" id="title" th:value="${view.title}">
+    <textarea name="content" id="content" th:text="${view.content}"></textarea>
+    <input name="NAME" id="NAME" th:value="${view.NAME}">
+
+    <button type="submit"> 수정저장 </button>
+</form>
+</div>
+
+
+</body>
+</html>

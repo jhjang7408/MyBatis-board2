@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<style>
+    .layout {
+        width : 500px;
+        margin : 0 auto;
+        margin-top : 40px
+    }
+</style>
+
+
+
+<body>
+
+
+
+<div class="layout">
+
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>글쓴이</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr th:each="board2 : ${list}">
+                <td><a th:text="${board2.id}" th:href="@{/board2/{id}(id=${board2.id})}"> 번호 </a></td>
+                <td><a th:text="${board2.title}" th:href="@{/board2/{id}(id=${board2.id})}"> 제목 </a></td>
+                <td th:text="${board2.NAME}"> 글쓴이 </td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
+
+
+<button type="button">
+    <a href="/board2/write"> 글쓰기 </a>
+</button>
+
+
+
+
+
+</body>
+</html>

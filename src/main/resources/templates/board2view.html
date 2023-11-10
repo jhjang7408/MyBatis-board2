@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1 th:text="${view.title}"></h1>
+<p th:text="${view.content}"></p>
+
+<p th:text="${view.NAME}"></p>
+
+
+<a th:href="@{/board2/{id}/update(id=${view.id})}"> 수정 </a>
+<a th:href="@{/board2/{id}/delete(id=${view.id})}"> 이승기의 삭제 </a>
+
+
+
+
+
+
+
+</body>
+</html>
